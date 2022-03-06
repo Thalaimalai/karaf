@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="studentmanagementfeature-0.0.1-SNAPSHOT">
+    <feature name="studentmanagementfeature" description="studentmanagementfeature-feature" version="0.0.1.SNAPSHOT">
+        <details>studentmanagementfeature details</details>
+        <bundle start-level="50">mvn:com.theatmo/studentview/0.0.1-SNAPSHOT</bundle>
+        <bundle start-level="50" dependency="true">mvn:com.theatmo/studentexception/0.0.1-SNAPSHOT</bundle>
+        <bundle start-level="50" dependency="true">mvn:com.theatmo/studentvalidation/0.0.1-SNAPSHOT</bundle>
+        <bundle start-level="50" dependency="true">mvn:com.theatmo/studentcontroller/0.0.1-SNAPSHOT</bundle>
+        <bundle start-level="50" dependency="true">mvn:com.theatmo/databaseconnection/0.0.1-SNAPSHOT</bundle>
+        <bundle start-level="50" dependency="true">mvn:mysql/mysql-connector-java/8.0.28</bundle>
+        <bundle start-level="50" dependency="true">mvn:com.google.protobuf/protobuf-java/3.11.4</bundle>
+    </feature>
+</features>

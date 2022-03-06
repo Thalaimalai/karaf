@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1646458776628
+Build-Jdk-Spec: 17
+Bundle-Activator: com.theatmo.studentvalidation.Activator
+Bundle-Description: studentvalidation OSGi bundle project.
+Bundle-ManifestVersion: 2
+Bundle-Name: studentvalidation Bundle
+Bundle-SymbolicName: studentvalidation
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.4
+Export-Package: com.theatmo.studentvalidation;version="0.0.1.SNAPSHOT";u
+ ses:="org.osgi.framework"
+Import-Package: com.theatmo.studentexception;version="[0.0,1)",org.osgi.
+ framework;version="[1.9,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-5.1.1.202006162103

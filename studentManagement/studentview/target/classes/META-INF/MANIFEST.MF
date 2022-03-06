@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1646458777334
+Build-Jdk-Spec: 17
+Bundle-Activator: com.theatmo.studentview.Activator
+Bundle-Description: studentview OSGi bundle project.
+Bundle-ManifestVersion: 2
+Bundle-Name: studentview Bundle
+Bundle-SymbolicName: studentview
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.4
+Export-Package: com.theatmo.studentview;version="0.0.1.SNAPSHOT";uses:="
+ org.osgi.framework"
+Import-Package: com.theatmo.studentcontroller;version="[0.0,1)",com.thea
+ tmo.studentexception;version="[0.0,1)",com.theatmo.studentmodel;version
+ ="[0.0,1)",com.theatmo.studentvalidation;version="[0.0,1)",org.osgi.fra
+ mework;version="[1.9,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-5.1.1.202006162103

@@ -1,0 +1,7 @@
+com\theatmo\studentdao\StudentDAOImpl.class
+com\theatmo\studentcontroller\Activator.class
+com\theatmo\studentservice\StudentService.class
+com\theatmo\studentservice\StudentServiceImpl.class
+com\theatmo\studentdao\StudentDAO.class
+com\theatmo\studentmodel\Student.class
+com\theatmo\studentcontroller\StudentRecordController.class

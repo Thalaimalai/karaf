@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1646458776819
+Build-Jdk-Spec: 17
+Bundle-Activator: com.theatmo.databaseconnection.Activator
+Bundle-Description: databaseconnection OSGi bundle project.
+Bundle-ManifestVersion: 2
+Bundle-Name: databaseconnection Bundle
+Bundle-SymbolicName: databaseconnection
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.4
+Export-Package: com.theatmo.databaseconnection;version="0.0.1.SNAPSHOT";
+ uses:="org.osgi.framework"
+Import-Package: com.mysql.cj.jdbc,org.osgi.framework;version="[1.9,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-5.1.1.202006162103

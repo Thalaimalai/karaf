@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1646458776275
+Build-Jdk-Spec: 17
+Bundle-Activator: com.theatmo.studentexception.Activator
+Bundle-Description: studentexception OSGi bundle project.
+Bundle-ManifestVersion: 2
+Bundle-Name: studentexception Bundle
+Bundle-SymbolicName: studentexception
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.4
+Export-Package: com.theatmo.studentexception;version="0.0.1.SNAPSHOT";us
+ es:="org.osgi.framework"
+Import-Package: org.osgi.framework;version="[1.9,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-5.1.1.202006162103

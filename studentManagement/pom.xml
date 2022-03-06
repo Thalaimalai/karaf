@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.theatmo</groupId>
+  <artifactId>studentManagement</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>studentview</module>
+  	<module>studentvalidation</module>
+  	<module>studentexception</module>
+  	<module>studentcontroller</module>
+    <module>studentmanagementfeature</module>
+    <module>databaseconnection</module>
+  </modules>
+</project>

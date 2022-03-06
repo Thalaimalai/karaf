@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1646458777116
+Build-Jdk-Spec: 17
+Bundle-Activator: com.theatmo.studentcontroller.Activator
+Bundle-Description: studentcontroller OSGi bundle project.
+Bundle-ManifestVersion: 2
+Bundle-Name: studentcontroller Bundle
+Bundle-SymbolicName: studentcontroller
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.4
+Export-Package: com.theatmo.studentcontroller;uses:="com.theatmo.student
+ model,org.osgi.framework";version="0.0.1.SNAPSHOT",com.theatmo.students
+ ervice;uses:="com.theatmo.studentmodel";version="0.0.1.SNAPSHOT",com.th
+ eatmo.studentdao;uses:="com.theatmo.studentmodel";version="0.0.1.SNAPSH
+ OT",com.theatmo.studentmodel;version="0.0.1.SNAPSHOT"
+Import-Package: com.theatmo.databaseconnection;version="[0.0,1)",com.the
+ atmo.studentdao,com.theatmo.studentexception;version="[0.0,1)",com.thea
+ tmo.studentmodel;version="[0.0,1)",com.theatmo.studentservice,org.osgi.
+ framework;version="[1.9,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-5.1.1.202006162103

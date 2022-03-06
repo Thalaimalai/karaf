@@ -1,0 +1,7 @@
+local:com.theatmo:studentview:jar:0.0.1-SNAPSHOT (compile)
+ local:com.theatmo:studentexception:jar:0.0.1-SNAPSHOT (compile)
+ local:com.theatmo:studentvalidation:jar:0.0.1-SNAPSHOT (compile)
+ local:com.theatmo:studentcontroller:jar:0.0.1-SNAPSHOT (compile)
+  local:com.theatmo:databaseconnection:jar:0.0.1-SNAPSHOT (compile)
+  local:mysql:mysql-connector-java:jar:8.0.28 (compile)
+   local:com.google.protobuf:protobuf-java:jar:3.11.4 (compile)
