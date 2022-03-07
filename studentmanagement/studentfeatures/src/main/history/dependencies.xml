@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="studentfeature-1.0-SNAPSHOT">
+    <feature version="0.0.0">
+        <bundle>mvn:com.google.protobuf/protobuf-java/3.11.4</bundle>
+        <bundle>mvn:com.theatmo/authentication/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.theatmo/crudoperation/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.theatmo/databaseconnection/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.theatmo/exception/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.theatmo/validation/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.theatmo/view/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:mysql/mysql-connector-java/8.0.28</bundle>
+    </feature>
+</features>
