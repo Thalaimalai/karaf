@@ -19,7 +19,8 @@ public class StudentView {
 	private static final AuthenticationController AUTHENTICATE_CONTROLLER = new AuthenticationController();
 
 	@Reference
-	static Validation validation;
+	static
+	Validation validation;
 
 	/**
 	 * Select choice to login and signup.
@@ -278,7 +279,7 @@ public class StudentView {
 	}
 
 	/**
-	 * Student login to view thier respective record.
+	 * Student login to view their respective record.
 	 */
 	public static void studentLogin() {
 		final String rollNumber = StudentView.getStudentRollNumber();
@@ -297,7 +298,7 @@ public class StudentView {
 	
 	/**
 	 * Back to main menu.
-	 * 
+	 *
 	 * @param choice
 	 */
 	public static void exit(final String choice) {

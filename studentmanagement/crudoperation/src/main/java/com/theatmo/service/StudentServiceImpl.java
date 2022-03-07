@@ -5,6 +5,7 @@ import com.theatmo.dao.StudentDAOImpl;
 import com.theatmo.model.Student;
 import com.theatmo.CustomException.RecordNotfoundException;
 import com.theatmo.CustomException.RollNumberAlreadyExistException;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * StudentServiceDAO.
@@ -12,6 +13,7 @@ import com.theatmo.CustomException.RollNumberAlreadyExistException;
  * @author ThalaimalaiPandiyanT
  *
  */
+@Component(service = StudentService.class)
 public class StudentServiceImpl implements StudentService {
 
 	private static final StudentDAO STUDENTRECORD_DAO = new StudentDAOImpl();

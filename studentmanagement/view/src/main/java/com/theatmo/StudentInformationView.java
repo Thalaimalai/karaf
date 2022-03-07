@@ -90,7 +90,7 @@ public class StudentInformationView {
 	 * @param student
 	 */
 	static void showDetails(final Student student) {
-        System.out.println(student);
+		System.out.println(student);
     }
 
 	/**

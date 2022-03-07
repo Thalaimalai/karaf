@@ -10,7 +10,7 @@ import java.time.LocalDate;
  * @author ThalaimalaiPandiyanT
  *
  */
-@Component
+@Component(service = Validation.class)
 public class StudentValidation implements Validation {
 
 	/**

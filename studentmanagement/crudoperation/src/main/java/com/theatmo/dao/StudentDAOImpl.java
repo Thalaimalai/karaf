@@ -3,6 +3,8 @@ package com.theatmo.dao;
 import com.theatmo.DatabaseConnection;
 import com.theatmo.CustomException.SQLSyntaxErrorException;
 import com.theatmo.model.Student;
+import org.osgi.service.component.annotations.Component;
+
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -43,7 +45,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 			return preparestatement1.executeUpdate() > 0;
 		} catch (SQLException exception) {
-			throw new SQLSyntaxErrorException("Database Access Denied");
+			throw new SQLSyntaxErrorException("Database Access Denied-Check SQL Syntax");
 		}
 	}
 
@@ -76,7 +78,7 @@ public class StudentDAOImpl implements StudentDAO {
 				}
 			}
 		} catch (SQLException exception) {
-			throw new SQLSyntaxErrorException("Database Access Failed");
+			throw new SQLSyntaxErrorException("Database Access Failed-Check SQL Syntax");
 		}
 		return student;
 	}
@@ -95,7 +97,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 			return preparestatement.executeUpdate() > 0;
 		} catch (SQLException exception) {
-			throw new SQLSyntaxErrorException("Database Access Denied");
+			throw new SQLSyntaxErrorException("Database Access Denied-Check SQL Syntax");
 		}
 	}
 
@@ -121,7 +123,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 			return preparestatement.executeUpdate() > 0;
 		} catch (SQLException exception) {
-			throw new SQLSyntaxErrorException("Database Access Denied");
+			throw new SQLSyntaxErrorException("Database Access Denied-Check SQL Syntax");
 		}
 	}
 
@@ -145,7 +147,7 @@ public class StudentDAOImpl implements StudentDAO {
 				studentList.put(student.getRollNumber(), student);
 			}
 		} catch (SQLException e) {
-			throw new SQLSyntaxErrorException("Database Access Failed");
+			throw new SQLSyntaxErrorException("Database Access Failed-Check SQL Syntax");
 		}
 		return studentList;
 	}

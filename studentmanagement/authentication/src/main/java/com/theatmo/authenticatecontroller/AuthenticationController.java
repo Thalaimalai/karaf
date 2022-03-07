@@ -1,11 +1,12 @@
 package com.theatmo.authenticatecontroller;
 
 import com.theatmo.authenticateservice.AuthenticationService;
-import com.theatmo.authenticateservice.AuthenticationServiceImpl;
+import org.osgi.service.component.annotations.Reference;
 
 public class AuthenticationController {
 
-    private static final AuthenticationService STUDENT_SERVICE_DAO = new AuthenticationServiceImpl();
+    @Reference
+    static AuthenticationService authenticateService;
 
     /**
      * Check admin signup.
@@ -15,7 +16,7 @@ public class AuthenticationController {
      * @param password
      */
     public boolean adminSignup(final String adminName, final String adminEmail, final String password) {
-        return STUDENT_SERVICE_DAO.insertAdminDetail(adminName, adminEmail, password);
+        return authenticateService.insertAdminDetail(adminName, adminEmail, password);
     }
 
     /**
@@ -25,7 +26,7 @@ public class AuthenticationController {
      * @param password
      */
     public boolean adminLogin(final String adminEmail, final String password) {
-        return STUDENT_SERVICE_DAO.validateAdminDetail(adminEmail, password);
+        return authenticateService.validateAdminDetail(adminEmail, password);
     }
 
     /**
@@ -35,6 +36,6 @@ public class AuthenticationController {
      * @param studentName
      */
     public boolean studentLogin(final String rollNumber, final String studentName) {
-        return STUDENT_SERVICE_DAO.studentLogin(rollNumber, studentName);
+        return authenticateService.studentLogin(rollNumber, studentName);
     }
 }

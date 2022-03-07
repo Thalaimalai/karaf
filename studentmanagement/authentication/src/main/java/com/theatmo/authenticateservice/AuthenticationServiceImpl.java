@@ -3,7 +3,9 @@ package com.theatmo.authenticateservice;
 import com.theatmo.authenticatedao.AuthenticationDao;
 import com.theatmo.CustomException.DetailsAlreadyFoundException;
 import com.theatmo.CustomException.RecordNotfoundException;
+import org.osgi.service.component.annotations.Component;
 
+@Component(service = AuthenticationService.class)
 public class AuthenticationServiceImpl implements AuthenticationService {
 
     private static final AuthenticationDao STUDENTRECORD_DAO = new AuthenticationDao();
@@ -55,5 +57,4 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             throw new RecordNotfoundException("Record Not Found");
         }
     }
-
 }

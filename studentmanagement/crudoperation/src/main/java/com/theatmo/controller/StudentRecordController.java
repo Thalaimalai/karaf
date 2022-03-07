@@ -2,7 +2,7 @@ package com.theatmo.controller;
 
 import com.theatmo.model.Student;
 import com.theatmo.service.StudentService;
-import com.theatmo.service.StudentServiceImpl;
+import org.osgi.service.component.annotations.Reference;
 
 /**
  * StudentManagementController. Controls all the requests and responses from the
@@ -13,7 +13,8 @@ import com.theatmo.service.StudentServiceImpl;
  */
 public class StudentRecordController {
 
-	private static final StudentService STUDENT_SERVICE_DAO = new StudentServiceImpl();
+	@Reference
+	StudentService studentService;
 
 	/**
 	 * Insert student details.
@@ -21,7 +22,7 @@ public class StudentRecordController {
 	 * @param student
 	 */
 	public boolean insertStudentDetails(final Student student) {
-		return STUDENT_SERVICE_DAO.insertStudentDetails(student);
+		return studentService.insertStudentDetails(student);
 	}
 
 	/**
@@ -30,7 +31,7 @@ public class StudentRecordController {
 	 * @param rollNumber
 	 */
 	public Student selectStudentDetail(final String rollNumber) {
-		return STUDENT_SERVICE_DAO.selectStudentDetail(rollNumber);
+		return studentService.selectStudentDetail(rollNumber);
 	}
 
 	/**
@@ -39,7 +40,7 @@ public class StudentRecordController {
 	 * @param rollNumber
 	 */
 	public boolean deleteStudentDetails(final String rollNumber) {
-		return STUDENT_SERVICE_DAO.deleteStudentDetails(rollNumber);
+		return studentService.deleteStudentDetails(rollNumber);
 	}
 
 	/**
@@ -48,7 +49,7 @@ public class StudentRecordController {
 	 * @param student
 	 */
 	public boolean updateStudentDetails(final Student student) {
-		return STUDENT_SERVICE_DAO.updateStudentDetails(student);
+		return studentService.updateStudentDetails(student);
 	}
 
 	/**
@@ -57,7 +58,7 @@ public class StudentRecordController {
 	 * @param rollNumber
 	 */
 	public boolean checkRollNumber(final String rollNumber) {
-		return STUDENT_SERVICE_DAO.checkRollNumber(rollNumber);
+		return studentService.checkRollNumber(rollNumber);
 	}
 
 	/**
@@ -66,6 +67,6 @@ public class StudentRecordController {
 	 * @param rollNumber
 	 */
 	public boolean checkUpdate(String rollNumber) {
-		return STUDENT_SERVICE_DAO.checkUpdate(rollNumber);
+		return studentService.checkUpdate(rollNumber);
 	}
 }

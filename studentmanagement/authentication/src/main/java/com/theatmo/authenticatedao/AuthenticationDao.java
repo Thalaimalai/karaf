@@ -9,7 +9,7 @@ import com.theatmo.CustomException.SQLSyntaxErrorException;
 public class AuthenticationDao {
 
     /**
-     * Insert the Admin informations.
+     * Insert the Admin information.
      *
      * @param adminName
      * @param adminEmail
@@ -26,7 +26,7 @@ public class AuthenticationDao {
 
             return statement.executeUpdate() > 0;
         } catch (SQLException exception) {
-            throw new SQLSyntaxErrorException("Database Access Denied");
+            throw new SQLSyntaxErrorException("Database Access Denied-Check SQL Syntax");
         }
     }
 
@@ -51,7 +51,7 @@ public class AuthenticationDao {
                 }
             }
         } catch (SQLException exception) {
-            throw new SQLSyntaxErrorException("Database Access Denied");
+            throw new SQLSyntaxErrorException("Database Access Denied-Check SQL Syntax");
         }
         return false;
     }
@@ -77,7 +77,7 @@ public class AuthenticationDao {
                 }
             }
         } catch (SQLException exception) {
-            throw new SQLSyntaxErrorException("Database Access Denied");
+            throw new SQLSyntaxErrorException("Database Access Denied-Check SQL Syntax");
         }
         return false;
     }
