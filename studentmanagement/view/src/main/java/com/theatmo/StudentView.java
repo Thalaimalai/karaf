@@ -2,6 +2,7 @@ package com.theatmo;
 
 import com.theatmo.authenticatecontroller.AuthenticationController;
 import com.theatmo.controller.StudentRecordController;
+import org.osgi.service.component.annotations.Reference;
 import java.sql.Date;
 import java.util.Scanner;
 
@@ -16,6 +17,9 @@ public class StudentView {
 	public static final Scanner SCANNER = new Scanner(System.in);
 	private static final StudentRecordController STUDENTRECORD_CONTROLLER = new StudentRecordController();
 	private static final AuthenticationController AUTHENTICATE_CONTROLLER = new AuthenticationController();
+
+	@Reference
+	static Validation validation;
 
 	/**
 	 * Select choice to login and signup.
@@ -59,7 +63,7 @@ public class StudentView {
 		final String choice = StudentView.SCANNER.next().trim();
 		StudentView.exit(choice);
 
-		if (StudentValidation.validateChoice(choice)) {
+		if (validation.validateChoice(choice)) {
 			return choice;
 		} else {
 			System.out.println("Enter Valid Choice:");
@@ -77,7 +81,7 @@ public class StudentView {
 		final String name = StudentView.SCANNER.next().trim();
 		StudentView.exit(name);
 
-		if (StudentValidation.validateName(name)) {
+		if (validation.validateName(name)) {
 			return name;
 		} else {
 			System.out.println("Enter Valid Name:\nPress # To Exit");
@@ -95,7 +99,7 @@ public class StudentView {
 		final String email = StudentView.SCANNER.next().trim();
 		StudentView.exit(email);
 		
-		if (StudentValidation.validateEmail(email)) {
+		if (validation.validateEmail(email)) {
 			return email;
 		} else {
 			System.out.println("Enter Valid Email:\nPress # To Exit");
@@ -113,7 +117,7 @@ public class StudentView {
 		final String password = StudentView.SCANNER.next();
 		StudentView.exit(password);
 
-		if (StudentValidation.validateAdminPassword(password)) {
+		if (validation.validateAdminPassword(password)) {
 			return password;
 		} else {
 			System.out.println("Enter Valid Password:\nPress # To Exit");
@@ -131,7 +135,7 @@ public class StudentView {
 		final String rollNumber = StudentView.SCANNER.next().trim();
 		StudentView.exit(rollNumber);
 
-		if (StudentValidation.validateStudentRollNumber(rollNumber)) {
+		if (validation.validateStudentRollNumber(rollNumber)) {
 			return rollNumber;
 		} else {
 			System.out.println("Enter Valid Rollnumber:\nPress # To Exit");
@@ -149,7 +153,7 @@ public class StudentView {
 		final String departmentName = StudentView.SCANNER.next().trim();
 		StudentView.exit(departmentName);
 
-		if (StudentValidation.validateDepartmentName(departmentName)) {
+		if (validation.validateDepartmentName(departmentName)) {
 			return departmentName;
 		} else {
 			System.out.println("Enter Valid Department:\nPress # To Exit");
@@ -167,7 +171,7 @@ public class StudentView {
 		final String gender = StudentView.SCANNER.next().trim();
 		StudentView.exit(gender);
 		
-		if (StudentValidation.validateGender(gender)) {
+		if (validation.validateGender(gender)) {
 			return gender;
 		} else {
 			System.out.println("Enter Valid Gender:\nPress # To Exit");
@@ -187,7 +191,7 @@ public class StudentView {
 		boolean isValidDate = false;
 
 		try {
-			isValidDate = StudentValidation.validateDOB(date);
+			isValidDate = validation.validateDOB(date);
 		} catch (CustomException exception) {
 			System.out.println(exception);
 		}
@@ -210,7 +214,7 @@ public class StudentView {
 		final String address = StudentView.SCANNER.next().trim();
 		StudentView.exit(address);
 
-		if (StudentValidation.validateAddress(address)) {
+		if (validation.validateAddress(address)) {
 			return address;
 		} else {
 			System.out.println("Enter Valid Address:\nPress # To Exit");
@@ -228,7 +232,7 @@ public class StudentView {
 		final String grade = StudentView.SCANNER.next().trim();
 		StudentView.exit(grade);
 		
-		if (StudentValidation.validateGrade(grade)) {
+		if (validation.validateGrade(grade)) {
 			return grade;
 		} else {
 			System.out.println("Enter Valid Grade:\nPress # To Exit");
