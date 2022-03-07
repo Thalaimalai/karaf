@@ -1,7 +1,0 @@
-in\theatmo\exception\CustomException$RecordNotfoundException.class
-in\theatmo\exception\CustomException$DateNotValidException.class
-in\theatmo\exception\Activator.class
-in\theatmo\exception\CustomException$RollNumberAlreadyExistException.class
-in\theatmo\exception\CustomException$SQLSyntaxErrorException.class
-in\theatmo\exception\CustomException.class
-in\theatmo\exception\CustomException$DetailsAlreadyFoundException.class
