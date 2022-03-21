@@ -47,11 +47,11 @@ public class StudentView {
 			case 4:
 				UserInput.SCANNER.close();
 				
-				 try {
-				      Activator.bundle.stop();
-				    } catch (Exception exception) {
-					 LOGGER.error(exception);
-				    }
+				try {	
+				    Activator.bundle.stop();
+				} catch (Exception exception) {
+					LOGGER.error(exception);
+				}
 			}
 		} while (choice < 4 );
 	}
