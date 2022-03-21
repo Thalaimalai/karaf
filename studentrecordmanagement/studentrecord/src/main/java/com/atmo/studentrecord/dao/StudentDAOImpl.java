@@ -43,7 +43,7 @@ public class StudentDAOImpl implements StudentDAO {
 			preparestatement1.setString(2, student.getGrade());
 
 			return preparestatement1.executeUpdate() > 0;
-		} catch (SQLException exception) {
+		} catch (Exception exception) {
 			throw new ConnectionFailedException("Database Access Denied-Check SQL Syntax");
 		}
 	}
@@ -76,7 +76,7 @@ public class StudentDAOImpl implements StudentDAO {
 							grade);
 				}
 			}
-		} catch (SQLException exception) {
+		} catch (Exception exception) {
 			throw new ConnectionFailedException("Database Access Failed-Check SQL Syntax");
 		}
 		return student;
@@ -95,7 +95,7 @@ public class StudentDAOImpl implements StudentDAO {
 			preparestatement.setString(1, rollNumber);
 
 			return preparestatement.executeUpdate() > 0;
-		} catch (SQLException exception) {
+		} catch (Exception exception) {
 			throw new ConnectionFailedException("Database Access Denied-Check SQL Syntax");
 		}
 	}
@@ -121,7 +121,7 @@ public class StudentDAOImpl implements StudentDAO {
 			preparestatement.setString(8, student.getRollNumber());
 
 			return preparestatement.executeUpdate() > 0;
-		} catch (SQLException exception) {
+		} catch (Exception exception) {
 			throw new ConnectionFailedException("Database Access Denied-Check SQL Syntax");
 		}
 	}
@@ -145,7 +145,7 @@ public class StudentDAOImpl implements StudentDAO {
 
 				studentList.put(student.getRollNumber(), student);
 			}
-		} catch (SQLException e) {
+		} catch (Exception exception) {
 			throw new ConnectionFailedException("Database Access Failed-Check SQL Syntax");
 		}
 		return studentList;
