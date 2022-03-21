@@ -26,7 +26,7 @@ public class AuthenticationDao {
             statement.setString(3, password);
 
             return statement.executeUpdate() > 0;
-        } catch (SQLException exception) {
+        } catch (Exception exception) {
             throw new ConnectionFailedException("Database Access Denied-Check SQL Syntax");
         }
     }
@@ -51,7 +51,7 @@ public class AuthenticationDao {
                     return true;
                 }
             }
-        } catch (SQLException exception) {
+        } catch (Exception exception) {
             throw new ConnectionFailedException("Database Access Denied-Check SQL Syntax");
         }
         return false;
@@ -77,7 +77,7 @@ public class AuthenticationDao {
                     return true;
                 }
             }
-        } catch (SQLException exception) {
+        } catch (Exception exception) {
             throw new ConnectionFailedException("Database Access Denied-Check SQL Syntax");
         }
         return false;
@@ -98,7 +98,7 @@ public class AuthenticationDao {
                 String email = resultset.getString(1);
                 emailList.add(email);
             }
-        } catch (SQLException exception) {
+        } catch (Exception exception) {
             throw new ConnectionFailedException("Database Access Denied");
         }
         return emailList;
