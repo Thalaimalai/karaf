@@ -14,24 +14,31 @@ import org.osgi.service.component.annotations.Deactivate;
 public class RestService {
 
     private Server server;
-
+    
+    /**
+     * Activate the server using server factory bean.
+     */
     @Activate
     public void activate() {
 
         try {
             JAXRSServerFactoryBean bean = new JAXRSServerFactoryBean();
+            
             bean.setAddress("/record");
             bean.setBus(BusFactory.getDefaultBus());
             bean.setProvider(new JacksonJsonProvider());
             bean.setServiceBean(new StudentRestControllerImpl());
             server = bean.create();
-            System.out.println(server);
+            
             System.out.println(server.isStarted());
         } catch (Exception exception) {
             System.out.println(exception);
         }
     }
-
+    
+    /**
+     * Deactivate the server.
+     */
     @Deactivate
     public void deactivate() {
 
