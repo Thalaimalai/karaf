@@ -3,7 +3,7 @@ package com.atmo.userinput;
 import java.util.Scanner;
 
 /**
- *Get the input from the user.
+ *Get the input details from the user.
  *
  * @author ThalaimalaiPandiyanT
  *
